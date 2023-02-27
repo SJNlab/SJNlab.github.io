@@ -4,11 +4,15 @@
   <url>
     <loc>https://SJNlab.github.io/tutorials/example/</loc>
   </url><url>
-    <loc>https://SJNlab.github.io/docs/</loc>
-  </url><url>
     <loc>https://SJNlab.github.io/tutorials/</loc>
   </url><url>
     <loc>https://SJNlab.github.io/tutorials/example/mermaid/</loc>
+  </url><url>
+    <loc>https://SJNlab.github.io/docs/</loc>
+    <lastmod>2023-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://SJNlab.github.io/</loc>
+    <lastmod>2023-02-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://SJNlab.github.io/blog/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
@@ -17,9 +21,6 @@
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://SJNlab.github.io/blog/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://SJNlab.github.io/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://SJNlab.github.io/tags/</loc>
