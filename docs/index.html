@@ -13,13 +13,13 @@
 <link rel="mask-icon" href='https://SJNlab.github.io/favicons/safari-pinned-tab.svg'  color="#004750">
 <link rel="shortcut icon" href='https://SJNlab.github.io/favicons/favicon.ico'>
 <meta name="msapplication-config" content='https://SJNlab.github.io/favicons/browserconfig.xml'>
-<title>Projects Docs | SJNLab Github Pages</title><meta property="og:title" content="Projects Docs" />
+<title>Example Project - MCF-7 ChIPseq Motif Set Analysis Outline | SJNLab Github Pages</title><meta property="og:title" content="Example Project - MCF-7 ChIPseq Motif Set Analysis Outline" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://SJNlab.github.io/docs/" />
-<meta itemprop="name" content="Projects Docs">
+<meta itemprop="name" content="Example Project - MCF-7 ChIPseq Motif Set Analysis Outline">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projects Docs"/>
+<meta name="twitter:title" content="Example Project - MCF-7 ChIPseq Motif Set Analysis Outline"/>
 <meta name="twitter:description" content=""/>
 
 
@@ -98,32 +98,18 @@
 </svg></label>
   </div>
   <section class="section aside_inner">
-    <h2 class="section_title active"><a  href="https://SJNlab.github.io/docs/" class="group">Projects Docs</a></h2>
+    <h2 class="section_title active"><a  href="https://SJNlab.github.io/docs/" class="group">Example Project - MCF-7 ChIPseq Motif Set Analysis Outline</a></h2>
   </section>
 </aside>
 
   <main class="content">
-    <h1>Projects Docs</h1>
+    <h1>Example Project - MCF-7 ChIPseq Motif Set Analysis Outline</h1>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
-</div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="/docs/_index_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<p>Doc updated with 12-18 ChIP samples (twoChip)</p>
+<div id="workflow-documentation" class="section level1">
+<h1>Workflow Documentation</h1>
+<p>Plotly-based upset plot built in python with reticulate wrapper. Input is a pandas dataframe with row-based instances, column one-hot encoding of group membership. Venn diagram count files created with Homer call <code>mergePeaks -d given MCFERV/peaks.txt MCFERE1Hr/peaks.txt MCFERE6Hr/peaks.txt MCFERTam6Hr/peaks.txt -venn venn_ERa.txt</code>. <code>venn.txt</code> files need to be parsed with <code>homer_venn_parse</code> to convert venn diagram count files to one-hot encoded matrices. <code>homer_venn_parse</code> also extracts <code>ColumnOrder</code> based on peak set frequency, which is later used to reorder motif heatmaps. <code>heatmap_peaks</code> builds a motif heatmap from a local directory of motif .txt files in a semi-automated fashion. Currently no significance cutoff is used (prevents skewed heatmap coloration). Regex is used with <code>stringi</code> to parse and clean input filenames. Currently only works with known motifs since de novo motifs have no unique id for merge. Heatmaps plot -log Pvalue of enrichment with column scaling (maintains peak size effect, prevents false positive coloration) instead of <code>percentize()</code> (see heatmaply documentation).</p>
 </div>
 
     <div class="pager pager_lean">
